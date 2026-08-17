@@ -1,0 +1,544 @@
+.students-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.students-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.students-header h1 {
+  margin: 4px 0 8px;
+  font-size: 32px;
+  color: var(--text-primary);
+}
+
+.students-header > div > p:last-child {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.students-eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: var(--primary);
+}
+
+.students-primary-button {
+  min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  color: #fff;
+  background: var(--primary);
+}
+
+.students-primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.students-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.student-stat-card {
+  min-height: 94px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.student-stat-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.student-stat-card span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.student-stat-card strong {
+  font-size: 23px;
+  color: var(--text-primary);
+}
+
+.students-panel {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.students-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.students-search {
+  flex: 1;
+  min-width: 260px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-muted);
+  background: var(--surface-secondary);
+}
+
+.students-search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  font: inherit;
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.students-filter {
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  font: inherit;
+  color: var(--text-primary);
+  background: var(--surface-secondary);
+}
+
+.students-error {
+  margin: 16px 18px 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 11px;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.students-table-wrapper {
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th {
+  padding: 17px 18px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--surface-secondary);
+}
+
+.students-table td {
+  padding: 17px 18px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.students-table tbody tr:hover {
+  background: var(--primary-soft);
+}
+
+.student-name-cell {
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.student-avatar {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.student-name-cell > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.student-name-cell strong {
+  color: var(--text-primary);
+}
+
+.student-name-cell span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.student-matricula {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.student-group {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 9px;
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.student-status {
+  display: inline-flex;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.student-status-activo {
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.13);
+}
+
+.student-status-baja {
+  color: #dc2626;
+  background: rgba(239, 68, 68, 0.13);
+}
+
+.student-status-egresado {
+  color: #2563eb;
+  background: rgba(59, 130, 246, 0.13);
+}
+
+.student-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.student-actions button {
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  background: var(--surface-secondary);
+}
+
+.student-actions button:hover {
+  color: var(--primary);
+}
+
+.student-actions .student-delete-button:hover {
+  color: #ef4444;
+}
+
+.students-empty {
+  padding: 38px !important;
+  text-align: center;
+  color: var(--text-muted) !important;
+}
+
+.student-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(3, 7, 18, 0.68);
+  backdrop-filter: blur(7px);
+}
+
+.student-modal,
+.student-history-modal {
+  width: min(720px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+}
+
+.student-history-modal {
+  width: min(900px, 100%);
+}
+
+.student-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.student-modal-header span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  color: var(--primary);
+}
+
+.student-modal-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--text-primary);
+}
+
+.student-modal-header > button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  background: var(--surface-secondary);
+}
+
+.student-form-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 24px;
+}
+
+.student-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-form-grid label > span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.student-form-grid input,
+.student-form-grid select,
+.student-form-grid textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  outline: none;
+  font: inherit;
+  color: var(--text-primary);
+  background: var(--surface-secondary);
+}
+
+.student-form-grid textarea {
+  min-height: 100px;
+  padding: 12px 13px;
+  resize: vertical;
+}
+
+.student-form-grid input:focus,
+.student-form-grid select:focus,
+.student-form-grid textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.student-form-wide {
+  grid-column: 1 / -1;
+}
+
+.student-auto-info,
+.student-current-assignment,
+.student-history-warning {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--primary-soft);
+}
+
+.student-auto-info strong,
+.student-current-assignment strong {
+  color: var(--text-primary);
+}
+
+.student-auto-info span,
+.student-current-assignment span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.student-history-warning {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.student-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 18px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-secondary);
+}
+
+.student-cancel-button {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--surface);
+}
+
+.student-history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.student-history-item {
+  display: grid;
+  grid-template-columns:
+    1.5fr 0.6fr 1fr 0.7fr;
+  gap: 15px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface-secondary);
+}
+
+.student-history-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.student-history-item span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.student-history-item strong {
+  color: var(--text-primary);
+}
+
+.student-history-item p {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1050px) {
+  .students-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .students-toolbar {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .students-header,
+  .students-toolbar {
+    flex-direction: column;
+  }
+
+  .students-primary-button,
+  .students-search,
+  .students-filter {
+    width: 100%;
+  }
+
+  .students-stats,
+  .student-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-form-wide,
+  .student-auto-info,
+  .student-current-assignment,
+  .student-history-warning {
+    grid-column: auto;
+  }
+
+  .student-history-item {
+    grid-template-columns: 1fr;
+  }
+
+  .student-history-item p {
+    grid-column: auto;
+  }
+}

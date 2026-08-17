@@ -1,0 +1,202 @@
+/* =====================================================
+   TIPOGRAFÍA GRANDE PARA TODAS LAS TABLAS CRUD
+   Alumnos / Materias / Grupos / Calificaciones
+===================================================== */
+
+
+/* ENCABEZADOS DE TABLA */
+
+.students-table th,
+.subjects-table th,
+.groups-table th,
+.grades-table th {
+  padding: 17px 18px !important;
+
+  font-size: 14px !important;
+  font-weight: 800 !important;
+
+  line-height: 1.3 !important;
+  letter-spacing: 0.65px !important;
+
+  color: var(--primary) !important;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--primary) 10%,
+      var(--surface-secondary)
+    ) !important;
+}
+
+
+/* DATOS DE LAS TABLAS */
+
+.students-table td,
+.subjects-table td,
+.groups-table td,
+.grades-table td {
+  padding: 18px !important;
+
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+
+  color: var(--text-secondary) !important;
+}
+
+
+/* =====================================================
+   NOMBRE DEL ALUMNO / MATERIA / GRUPO
+===================================================== */
+
+.student-cell strong,
+.subject-name-cell strong,
+.group-name-cell strong,
+.grade-student strong,
+.grade-subject strong {
+  font-size: 16px !important;
+  font-weight: 750 !important;
+
+  color: var(--text-primary) !important;
+}
+
+
+/* INFORMACIÓN SECUNDARIA */
+
+.student-cell span,
+.grade-student span,
+.grade-subject span {
+  margin-top: 4px !important;
+
+  font-size: 13px !important;
+
+  color: var(--text-muted) !important;
+}
+
+
+/* =====================================================
+   CLAVES, MATRÍCULAS Y CONTADORES
+===================================================== */
+
+.subject-code,
+.group-counter {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+
+/* =====================================================
+   PROMEDIOS DE CALIFICACIONES
+===================================================== */
+
+.grade-average {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+
+  color: var(--text-primary) !important;
+}
+
+
+/* =====================================================
+   ESTADOS
+===================================================== */
+
+.student-status,
+.subject-status,
+.group-status,
+.grade-status {
+  padding: 7px 11px !important;
+
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+
+/* =====================================================
+   ICONOS / AVATARES
+===================================================== */
+
+.student-avatar,
+.subject-icon,
+.group-avatar,
+.grade-avatar {
+  width: 43px !important;
+  height: 43px !important;
+
+  font-size: 14px !important;
+}
+
+
+/* =====================================================
+   BOTONES DE ACCIÓN
+===================================================== */
+
+.student-actions button,
+.subject-actions button,
+.group-actions button,
+.grade-actions button {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+
+/* =====================================================
+   TABLAS VACÍAS
+===================================================== */
+
+.students-empty,
+.subjects-empty,
+.groups-empty,
+.grades-empty {
+  font-size: 15px !important;
+
+  color: var(--text-muted) !important;
+}
+
+
+/* =====================================================
+   HOVER DE FILAS
+===================================================== */
+
+.students-table tbody tr:hover,
+.subjects-table tbody tr:hover,
+.groups-table tbody tr:hover,
+.grades-table tbody tr:hover {
+  background:
+    var(--primary-soft) !important;
+
+  box-shadow:
+    inset 4px 0 0
+    var(--primary) !important;
+}
+
+
+/* =====================================================
+   PANTALLAS MEDIANAS
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .students-table th,
+  .subjects-table th,
+  .groups-table th,
+  .grades-table th {
+    font-size: 13px !important;
+  }
+
+
+  .students-table td,
+  .subjects-table td,
+  .groups-table td,
+  .grades-table td {
+    font-size: 15px !important;
+  }
+
+
+  .student-cell strong,
+  .subject-name-cell strong,
+  .group-name-cell strong,
+  .grade-student strong,
+  .grade-subject strong {
+    font-size: 15px !important;
+  }
+}

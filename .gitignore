@@ -1,0 +1,30 @@
+# FRONTEND
+frontend/node_modules/
+frontend/dist/
+
+# BACKEND
+backend/.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VARIABLES PRIVADAS
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# WINDOWS
+Thumbs.db
+Desktop.ini
+
+# MAC
+.DS_Store
+
+# REPORTES GENERADOS
+reports/excel/*
+reports/pdf/*

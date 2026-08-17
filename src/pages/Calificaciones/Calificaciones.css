@@ -1,0 +1,548 @@
+.grades-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grades-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.grades-header h1 {
+  margin: 4px 0 8px;
+  font-size: 32px;
+  color: var(--text-primary);
+}
+
+.grades-header p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.grades-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: var(--primary) !important;
+}
+
+.grades-save-button {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 11px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: var(--primary);
+}
+
+.grades-save-button:disabled {
+  opacity: 0.6;
+}
+
+.grades-back-button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  background: var(--surface);
+}
+
+.grades-error,
+.grades-success {
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+.grades-error {
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #dc2626;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.grades-success {
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.grades-career-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.grades-career-card {
+  min-height: 145px;
+  display: grid;
+  grid-template-columns:
+    52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.grades-career-card:hover {
+  border-color: var(--primary);
+}
+
+.grades-card-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.grades-career-card div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.grades-career-card strong {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.grades-career-card span {
+  color: var(--text-secondary);
+}
+
+.grades-selected-title {
+  padding: 18px 20px;
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.grades-selected-title span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.grades-selected-title h2 {
+  margin: 5px 0 0;
+  color: var(--text-primary);
+}
+
+.grades-semester-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grades-semester-card {
+  min-height: 100px;
+  display: grid;
+  grid-template-columns:
+    48px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+  background: var(--surface);
+}
+
+.grades-semester-card:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.grades-semester-number {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.grades-semester-card div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.grades-semester-card span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.grades-summary {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grades-summary article {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--primary);
+  background: var(--surface);
+}
+
+.grades-summary article div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.grades-summary article span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.grades-summary article strong {
+  font-size: 21px;
+  color: var(--text-primary);
+}
+
+.grades-risk-stat {
+  color: #d97706 !important;
+}
+
+.grades-panel {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.grades-table-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.grades-table-title > div:first-child > span {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.grades-table-title h2 {
+  margin: 4px 0 0;
+  color: var(--text-primary);
+}
+
+.grades-table-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.grades-table-legend span {
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.grades-legend-danger {
+  color: #dc2626;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.grades-legend-warning {
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.grades-legend-normal {
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.grades-matrix-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.grades-matrix {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.grades-matrix th {
+  min-width: 130px;
+  padding: 14px 12px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+  color: var(--primary);
+  background: var(--surface-secondary);
+}
+
+.grades-name-column {
+  min-width: 250px !important;
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  text-align: left !important;
+  background: var(--surface) !important;
+}
+
+thead .grades-name-column {
+  background: var(--surface-secondary) !important;
+}
+
+.grades-subject-column {
+  min-width: 145px !important;
+  max-width: 170px;
+}
+
+.grades-subject-column strong,
+.grades-subject-column span {
+  display: block;
+}
+
+.grades-subject-column strong {
+  font-size: 12px;
+  color: var(--text-primary);
+  white-space: normal;
+}
+
+.grades-subject-column span {
+  margin-top: 4px;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.grades-matrix td {
+  height: 70px;
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--surface);
+}
+
+.grades-student-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.grades-student-name strong {
+  color: var(--text-primary);
+}
+
+.grades-student-name span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.grades-cell input {
+  width: 78px;
+  min-height: 40px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  outline: none;
+  font: inherit;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-primary);
+  background: var(--surface-secondary);
+}
+
+.grades-cell input:focus {
+  border-color: var(--primary);
+  box-shadow:
+    0 0 0 3px
+    var(--primary-soft);
+}
+
+
+/* PROMEDIO MENOR A 6.60 */
+
+.grades-danger-row td {
+  background:
+    color-mix(
+      in srgb,
+      #ef4444 12%,
+      var(--surface)
+    );
+}
+
+.grades-danger-row .grades-name-column {
+  border-left: 4px solid #ef4444;
+
+  background:
+    color-mix(
+      in srgb,
+      #ef4444 16%,
+      var(--surface)
+    ) !important;
+}
+
+.grades-danger-row .grades-cell input {
+  border-color:
+    rgba(239, 68, 68, 0.35);
+}
+
+
+/* PROMEDIO 6.60 A 6.99 */
+
+.grades-warning-row td {
+  background:
+    color-mix(
+      in srgb,
+      #fbbf24 14%,
+      var(--surface)
+    );
+}
+
+.grades-warning-row .grades-name-column {
+  border-left: 4px solid #f59e0b;
+
+  background:
+    color-mix(
+      in srgb,
+      #fbbf24 18%,
+      var(--surface)
+    ) !important;
+}
+
+.grades-warning-row .grades-cell input {
+  border-color:
+    rgba(245, 158, 11, 0.35);
+}
+
+
+.grades-average {
+  font-size: 17px;
+  color: var(--text-primary);
+}
+
+.grades-average-danger {
+  color: #ef4444;
+}
+
+.grades-average-warning {
+  color: #f59e0b;
+}
+
+.grades-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.grades-state-danger {
+  color: #dc2626;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.grades-state-warning {
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.17);
+}
+
+.grades-state-ok {
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.13);
+}
+
+.grades-state-pending {
+  color: var(--text-muted);
+  background: var(--surface-secondary);
+}
+
+.grades-empty {
+  padding: 45px !important;
+  text-align: center !important;
+  color: var(--text-muted) !important;
+}
+
+@media (max-width: 1000px) {
+  .grades-career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grades-semester-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .grades-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .grades-header {
+    flex-direction: column;
+  }
+
+  .grades-save-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .grades-semester-grid,
+  .grades-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .grades-table-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grades-table-legend {
+    justify-content: flex-start;
+  }
+}
