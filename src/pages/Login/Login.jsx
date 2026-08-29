@@ -23,20 +23,19 @@ function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  const [correo, setCorreo] = useState("");
-  const [password, setPassword] = useState("");
+  const [correo, setCorreo] = useState(
+    "profesor@academico.com"
+  );
+
+  const [password, setPassword] = useState(
+    "Profesor123!"
+  );
 
   const [showPassword, setShowPassword] =
     useState(false);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
-  function useDemoAccount() {
-    setCorreo("profesor@academico.com");
-    setPassword("Profesor123!");
-    setError("");
-  }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -69,7 +68,9 @@ function Login() {
 
             <div>
               <strong>Academic Global</strong>
-              <span>Sistema académico universitario</span>
+              <span>
+                Sistema académico universitario
+              </span>
             </div>
           </div>
 
@@ -136,7 +137,7 @@ function Login() {
             <ShieldCheck size={16} />
 
             <span>
-              Autenticación segura mediante FastAPI y JWT
+              Sistema de demostración académica
             </span>
           </div>
         </aside>
@@ -160,7 +161,8 @@ function Login() {
               <h2>Bienvenido</h2>
 
               <p>
-                Ingresa tus credenciales para continuar.
+                Las credenciales de demostración ya están
+                cargadas. Presiona ingresar para continuar.
               </p>
             </div>
 
@@ -216,7 +218,7 @@ function Login() {
                     className="auth-password-button"
                     onClick={() =>
                       setShowPassword(
-                        (current) => !current,
+                        (current) => !current
                       )
                     }
                     title={
@@ -235,21 +237,6 @@ function Login() {
               </label>
             </div>
 
-            <div className="auth-options">
-              <label className="auth-remember">
-                <input type="checkbox" />
-
-                <span>Recordar sesión</span>
-              </label>
-
-              <button
-                type="button"
-                className="auth-link-button"
-              >
-                Recuperar contraseña
-              </button>
-            </div>
-
             <button
               type="submit"
               className="auth-submit"
@@ -257,7 +244,7 @@ function Login() {
             >
               <span>
                 {loading
-                  ? "Verificando..."
+                  ? "Ingresando..."
                   : "Ingresar al sistema"}
               </span>
 
@@ -280,7 +267,9 @@ function Login() {
 
                 <div>
                   <strong>Profesor Demo</strong>
-                  <span>Acceso de demostración</span>
+                  <span>
+                    Acceso de demostración
+                  </span>
                 </div>
 
                 <div className="demo-status">
@@ -299,23 +288,17 @@ function Login() {
 
                 <div>
                   <span>Contraseña</span>
-                  <strong>Profesor123!</strong>
+                  <strong>
+                    Profesor123!
+                  </strong>
                 </div>
               </div>
-
-              <button
-                type="button"
-                className="demo-use-button"
-                onClick={useDemoAccount}
-              >
-                Utilizar credenciales
-              </button>
             </div>
 
             <p className="auth-footer-text">
               Sistema Académico Global
               <span> · </span>
-              Acceso restringido
+              Modo demostración
             </p>
           </form>
         </section>
